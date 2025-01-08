@@ -1,4 +1,4 @@
-package Fundamentos;
+package Fundamentos.TipoVariaveis;
 
 public class TiposPrimitivos {
 
