@@ -1,4 +1,4 @@
-package Fundamentos;
+package Fundamentos.Conversoes;
 
 import javax.swing.*;
 

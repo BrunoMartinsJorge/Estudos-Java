@@ -1,4 +1,4 @@
-package Fundamentos;
+package Fundamentos.Conversoes;
 
 public class ConversaoNumeroString {
 
