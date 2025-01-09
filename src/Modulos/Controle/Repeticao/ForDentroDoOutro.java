@@ -1,4 +1,4 @@
-package Modulos.Controle;
+package Modulos.Controle.Repeticao;
 
 public class ForDentroDoOutro {
 
