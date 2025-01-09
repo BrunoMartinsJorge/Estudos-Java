@@ -1,4 +1,4 @@
-package Modulos.Controle;
+package Modulos.Controle.Switch;
 
 import java.util.Scanner;
 
