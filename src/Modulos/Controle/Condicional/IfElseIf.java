@@ -1,4 +1,4 @@
-package Modulos.Controle;
+package Modulos.Controle.Condicional;
 
 import java.util.Locale;
 import java.util.Scanner;

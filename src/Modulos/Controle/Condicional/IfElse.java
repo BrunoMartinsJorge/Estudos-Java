@@ -1,4 +1,4 @@
-package Modulos.Controle;
+package Modulos.Controle.Condicional;
 
 import javax.swing.*;
 
