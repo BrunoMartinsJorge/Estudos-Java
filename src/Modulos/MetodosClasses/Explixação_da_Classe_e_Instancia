@@ -1,0 +1,89 @@
+Classe x Instância:
+
+Basicamente quando temos uma classe com alguns elemento como por exemplo dados de váriaveis, como o exemplo abaixo:
+
+class Pessoa{
+    int idade;
+    String nome;
+    int CPF;
+}
+
+A cada nova Instância(Que no caso é como criamos uma variavel que seu tipo referencia a class: "Pessoa p1 = new Pessoa();")
+um novo valor será gerado para cada uma das instancias geradas, como no exemplo abaixo:
+
+Pessoa p1 = new Pessoa(18, "Bruno", 821-839-812-54);
+
+(Ou também podemos adicionar os valores assim: )
+Pessoa p2 = new Pessoa();
+p2.idade = 18;
+p2.nome = "Bruno";
+p2.CPF = 821-839-812-54;
+
+Valor p1 {
+    idade = 18;
+    nome = "Bruno";
+    CPF = 821-839-812-54;
+}
+
+Valor p1 {
+    idade = 18;
+    nome = "Bruno";
+    CPF = 821-839-812-54;
+};
+
+Mas, caso colocássemos um atributo antes da criação da váriavel na classe que será ultilizada por outra váriavel chamada "static",
+o valor que for passado será ultilizada em todas, um exemplo seria assim:
+
+class Pessoa{
+
+static int idade;
+String nome;
+
+}
+
+Pessoa p1 = new Pessoa();
+p1.idade = 18;
+p1.nome = "Bruno";
+
+Pessoa p2 = new Pessoa();
+p2.idade = 19;
+p2.nome = "João";
+
+E se colocarmos ambas em um System.out.print() assim:
+
+System.out.print(p1.idade, p1.nome);
+System.out.print(p2.idade, p2.nome);
+
+Essas seriam as saidas:
+19, "Bruno";
+19, "João";
+
+Basicamente, quando usamos uma variável static, ela pertence à classe, e não às instâncias criadas dessa classe. Isso significa que todas as instâncias compartilham o mesmo valor dessa variável.
+
+Se criarmos várias instâncias da classe e atribuirmos diferentes valores à variável estática, a cada nova atribuição, o valor será atualizado para todas as instâncias, porque todas acessam a mesma variável.
+
+Ao final da execução do programa, o valor da variável estática será o último valor atribuído, independentemente de qual instância o tenha alterado. Por isso, o termo "static" indica que a variável não é exclusiva de cada instância (como uma variável de instância seria), mas sim compartilhada.
+
+Isso não significa que o valor é imutável; ele pode ser alterado, mas todas as instâncias sempre verão o mesmo valor, que será o último atribuído. Por exemplo, se o último valor atribuído for 42, todas as instâncias da classe verão esse valor na variável estática.
+
+POis esse valor não é mais acossiado a instancia em si, mas, agora esta relacionada a classe!
+
+/*
+Além de que quando queremos acessar um valor de uma instancia devemos fazer dessa maneira:
+[
+class Pessoa{
+    int idade;
+    String nome;
+}
+Pessoa pessoa = new Pessoa(18, "Bruno");
+pessoa.idade;
+
+// Dessa forma acima acessamos o valor ultilizando o "pessoa.idade;" que no caso é na instancia
+]
+Mas no caso se o valor for "static" ele não precisa disso para ser acessado, podemos com o mesmo exemplo acessalo assim:
+[
+Pessoa.idade;
+No caso podemos acessar o valor sem criar uma variavel que estancie a classe na variavel. Apenas usando a propria nomenclatura da classe(Seu nome),
+e assim acessar o valor como no exemplo acima!
+]
+*/
