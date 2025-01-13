@@ -10,9 +10,6 @@ public class DataTeste {
         dataTeste2.ano = 2009;
 
         Data dataTeste1 = new Data(12,6,2006);
-        //dataTeste1.dia = 12;
-        //dataTeste1.mes = 6;
-        //dataTeste1.ano = 2006;
 
         System.out.println(dataTeste1.converterData(dataTeste1.dia, dataTeste1.mes, dataTeste1.ano));
         System.out.println(dataTeste2.converterData(dataTeste2.dia, dataTeste2.mes, dataTeste2.ano));
