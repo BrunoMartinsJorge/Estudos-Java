@@ -1,4 +1,4 @@
-package Modulos.ArraysCollections;
+package Modulos.ArraysCollections.Arrays;
 
 import java.util.Arrays;
 
