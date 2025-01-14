@@ -1,0 +1,60 @@
+Collections => Coleções
+
+As collections são um tipo de forma de se armazenar dados em uma váriavel. Elas possuem algumas variações, sendo elas:
+
+1# Set -> {
+    > Por padrão não é ordenada(Mas pode ser ordenado);
+    > Não possui um index(No caso diferentemente das arrays que podemos pegar um elemento com base no seu index, ex:
+    variavelDeLista[2] = ...);
+    > Não aceita repetição, no caso ela não aceita dados repetidos(Caso um dado repetido seja inserido, ela vai ignorar esse dado);
+    > Sua etrutura é baseada em um conjunto de dados;
+    > Pode ser tanto Heterogêneo(Dados com tipos diversificados), quanto Homogêneo(Dados com mesmos tipos);
+
+    * Sua interface que define uma coleção/conjunto que não permite elementos duplicados.
+    A interface SortedSet, que estende Set, possibilita a classificação natural dos elementos, tal como a ordem alfabética;
+}
+
+2# List -> {
+    > Ela é indexada(No caso diferentemente do "Set" ele é indexado);
+    > Permite repetição de dados(No caso diferentemente do "Set" ele aceita repetição de dados iguais);
+    [É mais parecido com o Array];
+    > Sua estrutura é muito parecida com a de uma lista de dados;
+
+    * Sua estrutura define uma coleção ordenada, podendo conter elementos duplicados. Em geral, o usuário tem controle total sobre a posição onde cada elemento é
+    inserido e pode recuperá-los através de seus índices. Prefira esta interface quando precisar de acesso aleatório, através do índice do elemento;
+}
+
+3# Map -> {
+    > Chave / Valor;
+    > A chave não aceita repetição(já que a chave é o identificador ela não poder ser repetida);
+    > O valor aceita repetição(Como não é um identificado, os dados podem ser repetidos);
+    > Sua estrutura é muito parecida com uma tabela de duas colunas, sendo baseada também em uma estrutura de chave e valor;
+
+    * Ela também pode ser considerada uma junção do "Set" e do "List", ja que a coluna de "chave" seria representada pelo "Set" já que ambas não aceitam
+    repetição. E a coluna de "objeto" seria o "List" pois aceita a repetição de dados.
+
+    * Ela mapeia chaves para valores. Cada elemento tem na verdade dois objetos: uma chave e um valor. Valores podem ser duplicados, mas chaves não.
+    SortedMap é uma interface que estende Map, e permite classificação ascendente das chaves. Uma aplicação dessa interface é a classe Properties,
+    que é usada para persistir propriedades/configurações de um sistema, por exemplo.
+}
+
+4# Queue -> {
+    > Implementa a fila;
+    > Segue a regra de: first in / first out(FiFo). Que significa "O primeiro a entrar, é o primeiro a sair";
+
+    * Um exemplo de como funciona é uma fila de atendimento de hospital:
+    A primeira pessoa a entrar na fila também é a primeira a sair, dando local para a proxima que chegou;
+
+    * É um tipo de coleção para manter uma lista de prioridades, onde a ordem dos seus elementos, definida pela implementação de Comparable ou Comparator,
+    determina essa prioridade. Com a interface fila pode-se criar filas e pilhas;
+}
+
+5# Stack -> {
+    > Implementa a pilha;
+    > Segue a regra de: last in / first out(LiFo). Que significa "O ultimo a entrar, é o primeiro a sair";
+
+    * Um exemplo de como funciona é pilha de livros:
+    O ultimo livro que foi adicionado a pilha de livros geralmente(Caso a pessoa não pegue um do meio) é o primeiro a ser pego para ler;
+}
+
+Essas estruturas não necessitam que seu tamanho seja setado, facilitando caso  exista algum problema com excesso de dados.
