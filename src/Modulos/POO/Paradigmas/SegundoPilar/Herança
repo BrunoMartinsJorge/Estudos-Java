@@ -1,0 +1,51 @@
+ - Primeiramente o que seria a herança? A herança é algo que ocorre quando algo como por exemplo um filho herda algumas caracteristicas do pai, na programação
+isso também existe, e é uma pratica muito popular, que serve para reutilizar um código, assim como as funções só que em uma escala um pouco maior, já que pode ser
+herdada de outra classe. Mas não só a Herança pode causar um reuso de código, mas sim também a composição.
+
+Quando usar herança ou composição?
+
+Quando usar Herança ou Composição?
+Use Herança:
+
+Quando existe uma relação natural de "é um(a)" entre classes.
+Para aproveitar ou especializar funcionalidades de uma superclasse.
+Exemplo: Uma classe Cachorro que herda de uma classe Animal.
+
+Use Composição:
+Quando um objeto é composto por outro, mas eles não compartilham uma relação hierárquica.
+Para evitar criar hierarquias muito profundas que podem dificultar a manutenção.
+Exemplo: Uma classe Carro que possui um atributo do tipo Motor. Ou quando existe uma relação natural de "tem um(a)".
+
+Composição: [
+
+Um carro "tem um" motor.
+Um cachorro "tem um" rabo.
+Uma casa "tem uma" porta.
+
+]
+
+Herança: [
+
+Um carro "é um" veículo.
+Uma águia "é uma" ave.
+Uma maçã "é uma" fruta.
+Isso é implementado ao criar subclasses que herdam de superclasses.
+
+]
+
+Isso também cria divisórias, sendo elas "Super classes(Mais Genéricas)" <--- "Sub classes(+Específica)";
+No exempo acima, o que seria uma "super classe", e o que seira uma "sub classe"? Para análisarmos quais delas se encaixam nisso devemos dividi-las em pares, como por
+exemplo um par seria: Mamíferos Aquático "é um" mamifero, os elementos/classes seriam "mamiferos" e "mamiferos aquaticos", sendo que a "Super classe" seria a classe
+"mamifero" por estar acima da classe "mamiferos aquaticos" fazendo com que ela herder algumas das caracteristicas da "Super classe", e consequentemente sendo á
+"Sub classe". Basicamente quanto mais acima, entre duas classes a que está mais acima é a "Super" e também acaba sendo mais genérica, e a que esta mais abaixo é a
+"Sub" e acaba sendo mais especifica, já que adiciona mais coisas, além das que foram herdadas da "Super classe";
+
+E no caso a herança é um modelo hierarquico, que no caso esses modelos seguem uma hierarquia entre si, mas existem alguns casos em que existe hierarquia mas não
+existe herança, um exemplo seria no exercito:
+    * Digamos que temos 5 classes, sendo a 1º Soldado, a 2º Cabo, a 3º Sargento, a 4º Tenente e a ultima a 5º Capitão, sendo em order decrescente, o maior sendo
+    capitão e a menor soldado, se houve-se herança, um capitão seria todos os outros antes dele, o tenente seriam também todos os outros atras dele e assim por
+    diante.
+
+Diferente de quando existe o fator de herança, que um exemplo seria, por exemplo 3 outras classes, sendo: Aluno, Pessoa, Ser vivo, o aluno herdaria as caracteristicas
+de uma pessoa, e a pessoa herdaria as caracteristicas de um ser vivo, assim ligando as 2 outras classes com a classe "Ser vivo". Nesses casos existem heranças, mas já
+em outros não.
