@@ -1,0 +1,56 @@
+Polimorfismo => "Poli" = muitas <=|=> "Morfismo" = forma => Polimorfismo = Muitas Formas.
+
+Bem o que é o polimorfismo?
+Ele é o terceiro pilar de POO, e existem duas formas para ele ser retratado, sendo elas: "Estático" e "Dinâmico".
+
+O que é o polimorfismo estático?
+    * O polimorfismo estático também chamado de sobrecarga, pode ser representado quando possuimos uma função que recebe por exemplo um parámetro do tipo double, e esse
+    parametro é uma valor de um produto, e depois escrevemos a mesma função/metodo só que alterando seus parametros, como por exemplo agora ela recebe uma String, que é
+    o nome de um produto, e depois reescrevemos ela só que passando um int que é a quantidade e por fim alteramos para ela receber dois valores, sendo um deles um double
+    que é uma porcentagem de desconto, e o outro um boolean, que é se existe um desconto.
+    Esse apelido de "sobrecarga" existe pois estamos criando muitas vezes uma função, mas passando diverssas formas de parametros, representando o "polimorfismo", e como
+    estamos criando diverssos metodos com o mesmo nome isso gera uma "sobrecarga".
+
+Exemplos: [
+    <+Java+>
+
+    void acao(int algo){...};
+    void acao(String algo){...};
+    void acao(boolean algo){...};
+    void acao(double algo){...};
+    void acao(char algo){...};
+];
+
+O que é o polimorfismo dinâmico?
+    * Polimorfismo dinâmico é um recurso da orientação a objetos que permite que o método chamado em um objeto seja determinado em tempo de execução, de acordo com o
+     tipo real do objeto, e não o tipo da variável que o referencia.
+
+    Condições para o polimorfismo dinâmico:
+
+    1º -> Deve existir herança ou implementação de interface entre as classes envolvidas.
+    2º -> Deve haver um método sobrescrito (override) na classe derivada.
+    3º -> O método sobrescrito deve ser chamado através de uma referência do tipo da classe base.
+
+Exemplos: [
+    class Carro {
+        void acelerar() {
+            System.out.println("Carro está acelerando.");
+        }
+    }
+
+    class Civic extends Carro {
+        @Override
+        void acelerar() {
+            System.out.println("Civic está acelerando rapidamente.");
+        }
+    }
+
+    public class TestePolimorfismo {
+        public static void main(String[] args) {
+            // Polimorfismo dinâmico
+            Carro veiculo = new Civic();
+            veiculo.acelerar(); // Saída: "Civic está acelerando rapidamente."
+        }
+    }
+
+]
