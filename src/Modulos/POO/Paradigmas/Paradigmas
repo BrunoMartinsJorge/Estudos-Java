@@ -1,0 +1,220 @@
+Paradigmas da Programação:
+
+Tipos:
+
+1# -> Não Estruturado (GoTo) -> {
+    É um dos paradigmas da programação, sendo conhecido como paradigma não estruturado, GoTo que significa "vá para", é uma abordagem de programação em que seu
+    fluxo de execução é controlado por instruções de desvio, com o comando "goto". Assim permitindo que o programa pule para uma determinada linha de código, sem
+    seguir uma estrutura hierárquica de blocos típicos de paradigmas estruturados. Basicamente alterando entre partes do código, esse tipo de paradigma também é
+    chamado de "macarrão" pois ele sai de uma parte do código e vai para outro e se imaginarmos um trassegado que é o seu caminho, podemos ver que cria um formato
+    de macarrão comprido.
+
+    Algumas de suas caracteristicas são:
+
+    1# -> Controle de fluxo direto [
+        O goto permite saltar para qualquer parte do código, alterando abruptamente o fluxo de execução. Isso oferece grande flexibilidade para lidar com diferentes
+        cenários, mas pode resultar em lógica difícil de seguir.
+    ]
+
+    2# -> Ausência de abstrações estruturais [
+          Não há suporte natural para conceitos modernos como loops (for, while) ou condicionais bem estruturados (if-else).
+          Em vez disso, os desenvolvedores usam goto para implementar manualmente essas construções.
+    ]
+
+    3# -> Códigos propensos ao "Spaghetti Code" [
+          O uso excessivo de goto pode resultar em um código confuso e desorganizado, frequentemente chamado de "código espaguete", porque os saltos entre diferentes
+          partes do programa tornam o fluxo de execução complexo como um prato de espaguete.
+    ]
+
+    EXEMPLO: [
+        inicio:
+            print("Digite um número: ")
+            input numero
+            if numero < 0 goto negativo
+            print("Número positivo ou zero")
+            goto fim
+
+        negativo:
+            print("Número negativo")
+
+        fim:
+            print("Fim do programa")
+    ]
+}
+
+2# -> Procedural -> {
+
+    O paradigma procedural é um estilo de programação que se baseia na decomposição do problema em uma sequência de passos lógicos ou procedimentos, também chamados
+    de funções ou sub-rotinas. Ele é considerado um avanço em relação ao paradigma não estruturado, pois organiza o código de forma hierárquica e modular.
+
+    Algumas de suas caracteristicas são:
+
+    1# -> Estrutura sequencial[
+          O fluxo de execução segue uma sequência lógica de instruções.
+          As instruções são organizadas de forma linear, com desvios controlados por estruturas como if, else, switch e loops (for, while).
+    ]
+
+    2# -> Decomposição em funções [
+          O código é dividido em procedimentos ou funções, cada um responsável por uma parte específica do problema.
+          Isso promove a reutilização de código e facilita a manutenção.
+    ]
+
+    3# -> Uso de variáveis globais e locais [
+          As variáveis podem ser declaradas globalmente (acessíveis por todo o programa) ou localmente (restritas a uma função).
+    ]
+
+    4# -> Dados e lógica separados [
+          No paradigma procedural, os dados e as funções que os manipulam geralmente não estão agrupados como em paradigmas como o orientado a objetos.
+    ]
+
+    EXEMPLO: [
+        função calcularSoma(a, b):
+        retorna a + b
+
+        função principal():
+        x = 10
+        y = 20
+        soma = calcularSoma(x, y)
+        print("A soma é: " + soma)
+
+        principal()
+    ]
+}
+
+3# -> Funcional -> {
+
+    O paradigma funcional é um estilo de programação baseado em funções matemáticas puras e no conceito de imutabilidade. Em vez de manipular estados ou variáveis
+    mutáveis, a programação funcional foca em transformar dados por meio de funções que não possuem efeitos colaterais.
+    Esse paradigma é amplamente utilizado em problemas que exigem processamento de dados complexo, paralelismo e soluções declarativas.
+
+    Algumas de suas caracteristicas são:
+
+    1# -> Funções puras [
+          Uma função pura é aquela que sempre retorna o mesmo resultado para os mesmos argumentos e não causa efeitos colaterais (como modificar variáveis externas
+          ou alterar o estado do programa).
+
+          Exemplo: [
+            // Função pura
+            const soma = (a, b) => a + b;
+            console.log(soma(2, 3)); // Sempre retorna 5
+          ]
+    ]
+
+    2# -> Imutabilidade [
+          Em vez de modificar variáveis ou estruturas de dados, o paradigma funcional cria novas versões dos dados.
+          Isso previne alterações inesperadas e facilita o rastreamento de erros.
+    ]
+}
+
+4# -> Orientado a Objetos -> {
+
+    O paradigma de Orientação a Objetos (OO) é um estilo de programação baseado no conceito de objetos, que são instâncias de classes. Ele organiza o código em torno
+    de dados (atributos) e comportamentos (métodos) relacionados, promovendo modularidade, reutilização e encapsulamento.
+    Esse paradigma é amplamente utilizado em sistemas de software modernos devido à sua capacidade de representar modelos do mundo real de forma intuitiva.
+
+    Algumas de suas caracteristicas são:
+
+    1# -> Classes e Objetos [
+
+          Uma classe é um molde ou blueprint que define atributos (dados) e métodos (funções).
+          Um objeto é uma instância de uma classe, representando uma entidade concreta no programa.
+
+          Exemplo [
+
+          class Carro:
+              def __init__(self, marca, modelo):
+                  self.marca = marca
+                  self.modelo = modelo
+
+              def ligar(self):
+                  print(f"O {self.marca} {self.modelo} está ligado.")
+
+          carro1 = Carro("Toyota", "Corolla")
+          carro1.ligar()  # Saída: O Toyota Corolla está ligado.
+
+          ]
+
+    2# -> Encapsulamento [
+
+          Os atributos e métodos de uma classe podem ser protegidos contra acessos externos indevidos.
+          Os níveis de acesso (público, privado, protegido) ajudam a controlar como os dados são manipulados.
+
+          Exemplo [
+
+          class ContaBancaria:
+              def __init__(self, saldo):
+                  self.__saldo = saldo  # Atributo privado
+
+              def depositar(self, valor):
+                  self.__saldo += valor
+
+              def consultar_saldo(self):
+                  return self.__saldo
+
+          conta = ContaBancaria(1000)
+          conta.depositar(500)
+          print(conta.consultar_saldo())  # Saída: 1500
+
+            ]
+          ]
+
+    3# -> Herança [
+
+          Permite que uma classe (subclasse) herde atributos e métodos de outra classe (superclasse).
+          Reutiliza e estende funcionalidades existentes.
+
+          Exemplo [
+
+          class Animal:
+              def falar(self):
+                  pass
+
+          class Cachorro(Animal):
+              def falar(self):
+                  print("Au Au!")
+
+          dog = Cachorro()
+          dog.falar()  # Saída: Au Au!
+
+            ]
+          ]
+
+    4# -> Polimorfismo [
+
+          Permite que diferentes classes compartilhem o mesmo método ou interface, mas implementem comportamentos distintos.
+
+          Exemplo [
+
+          class Forma:
+              def area(self):
+                  pass
+
+          class Retangulo(Forma):
+              def __init__(self, largura, altura):
+                  self.largura = largura
+                  self.altura = altura
+
+              def area(self):
+                  return self.largura * self.altura
+
+          class Circulo(Forma):
+              def __init__(self, raio):
+                  self.raio = raio
+
+              def area(self):
+                  return 3.14 * self.raio * self.raio
+
+          formas = [Retangulo(10, 20), Circulo(5)]
+          for forma in formas:
+              print(forma.area())
+
+            ]
+          ]
+
+    5# -> Abstração [
+
+          Foca nos aspectos relevantes de uma entidade e ignora os detalhes desnecessários.
+          É implementada por meio de classes abstratas ou interfaces.
+
+          ]
+}
