@@ -1,0 +1,18 @@
+Encapsulamento:
+
+Descrição: O Encapsulamento é um dos pilares da Programação Orientada a Objetos, que se baseia em poder alterar o nivel de acessibilidade de um ou mais elementos do
+código, o deixando mais exposto, ou mais privativo para os outros componentes. Servindo como um modificador de acesso para que não ocorra alteração em certas partes
+do código, deixando mais dificil ou mais facil de se alterar alguma informação dependendo doque você deseja fazer com o objeto.
+
+Os tipos de visibilidade são 4 em Java:
+
+    1º -> Package(Default): Esse é por padrão definido ao criar um arquivo em Java, ele faz com que os componentes só tenham acesso aos dados de um outro, só se
+    forem do mesmo package(Pacote).
+    2º -> Public(Publico): Esse encapsulamento permite que váriaveis, metodos e etc, possam ser acessados em qualquer parte do seu projeto a qualquer hora, sendo
+    recomendado quando existe a necessidade de acessar algo em qualquer local.
+    3º -> Protected(Protegido): Esse modificador deixa tudo visivel para os componentes que estiverem no mesmo package que ele se encontra, usando um dos outros
+    pilares sendo o de heranças .
+    4º -> Private(Privado): Esse é o ultimo e o mais seguro modificador de acesso entre os demais, ele deixa invisivel para todos os componentes que não estão na
+    mesma classe que ele se encontrar.
+
+Também pode ser definido como uma cápsula, que em seu interio possui um objeto, e neste objeto possuimos seus atributos e metodos!
