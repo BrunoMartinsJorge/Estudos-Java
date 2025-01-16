@@ -1,0 +1,69 @@
+"Uma classe abstrata em Java combina características de interfaces e classes concretas, permitindo que você defina uma base comum para um grupo de classes relacionadas.
+Assim como as interfaces, uma classe abstrata pode declarar métodos sem implementação, que devem ser obrigatoriamente sobrescritos pelas subclasses. No entanto, diferentemente das
+interfaces, uma classe abstrata também pode conter métodos com implementação completa e atributos não constantes.
+
+Diferenças em relação à interface:
+
+Interfaces são implementadas (implements), enquanto classes abstratas são herdadas (extends). Exemplo: {
+public interface Esportivo { ... }
+public class Carro implements Esportivo { ... } // Implementação de interface
+public abstract class Veiculo { ... }
+public class Carro extends Veiculo { ... } // Herança de classe abstrata
+}
+
+Métodos de interfaces não tinham corpo até o Java 8 (exceto métodos default ou static), enquanto classes abstratas podem conter tanto métodos com corpo quanto métodos abstratos.
+Exemplo: {
+
+// Interface
+public interface Animal {
+    void falar(); // Sem corpo
+}
+
+// Classe abstrata
+public abstract class Animal {
+    void dormir() { System.out.println("Dormindo..."); } // Com corpo
+    abstract void falar(); // Sem corpo
+}
+}
+
+Diferenças em relação à classe concreta:
+
+Classes concretas podem ser instanciadas, enquanto classes abstratas não podem.
+Exemplo: [// Classe concreta => Carro carro = new Carro(...); // OK]
+
+// Classe abstrata
+Veiculo veiculo = new Veiculo(...); // Erro: classes abstratas não podem ser instanciadas
+Por que usar classes abstratas? Classes abstratas são úteis quando você deseja definir uma base para outras classes, mas sem permitir que a base seja instanciada diretamente. Por exemplo, em um sistema de veículos, você pode ter uma classe abstrata Carro que define atributos e comportamentos comuns, como cor, modelo, e os métodos ligar e desligar. Cada tipo específico de carro, como Ferrari ou Fusca, pode herdar essa classe e implementar seu próprio comportamento para métodos abstratos, como acelerar.
+
+Exemplo:{
+// Classe abstrata
+public abstract class Carro {
+    String cor;
+    String modelo;
+    double preco;
+
+    public Carro(String cor, String modelo, double preco) {
+        this.cor = cor;
+        this.modelo = modelo;
+        this.preco = preco;
+    }
+
+    void ligar() {
+        System.out.println("Carro ligado...");
+    }
+
+    abstract void acelerar(); // Método abstrato
+}
+
+// Subclasse concreta
+public class Ferrari extends Carro {
+    public Ferrari(String cor, String modelo, double preco) {
+        super(cor, modelo, preco);
+    }
+
+    @Override
+    void acelerar() {
+        System.out.println("A Ferrari está acelerando rapidamente!");
+    }
+}
+}
