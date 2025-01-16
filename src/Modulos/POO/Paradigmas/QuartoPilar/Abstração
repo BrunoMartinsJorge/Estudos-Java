@@ -1,0 +1,19 @@
+Oque é Abstração?
+
+A abstração também pode ser chamada de simplificação, mas  oque ela é ou representa? É a pratica de pagar algo do mundo real, e simplifica-lo para o seu software, no
+caso não existe uma regra para oque você deve colocar do mundo real no programa. Um bom exemplo seria um sistema de faculdade, e seriamos obrigados a ver como uma
+faculdade funciona, e assim desenvolveriamos um software com base no que vimos na vida real, seguindo esse mesmo conceito de um software de faculdade, caso fossemos
+fazer isso, qual seria um dos conceitos que deveriamos colocar nesse software, um exemplo seria o conceito "Professor", poderiamos criar algo para representar o
+"professor" em nosso software, em Java isso poderia ser reprensentado por uma classe, e que teria seus atributos e funções para ficar o mais proximo ao mundo real,
+existem alguns outros exemplo que podemos sitar, sendo eles, classes que representariam: Salas, Disciplinas, Alunos e etc.
+
+Mas algo que deve ser mencionado, é que em seu programa/código, não necessariamente deve possuir somente as coisas que existem na faculdade, algumas coisas podem ser
+implementadas em seu código para que ele fique mais organizado e fácil de realizar a manutenção.
+
+Pois nem todas as classes/conseitos do seu código teram um correspondente no mundo real, isso significa que: "Nem todos os elementos do mundo real de fato devem ser
+adicionados ao seu software, e nem tudo oque esta no software tem seu correspondente no mundo real".
+
+Um exemplo disso, seguindo esse mesmo exemplo da faculdade, seria um "aluno bolsista", ele seria um aluno normal mas com alguns atributos que o diferenciam de um
+aluno normal, mas que na vida real ele seria um aluno como qualquer outro só que no caso ele teria um auxilio financeiro, em Java poderiamos representa-lo como uma
+classe que se relaciona com a classe aluno, no caso esse "aluno bolsista" herdaria todas as caracteristicas de um aluno normal más que ainda tivesse suas proprias
+caracteristicas, assim tendo a herança de outra classe. Basicamente a abstração tem como base o "real"(Aquilo que existe no mundo).
