@@ -1,0 +1,16 @@
+Em Java, uma interface é uma estrutura que define um conjunto de métodos que devem ser obrigatoriamente implementados por qualquer classe que a implemente. Diferentemente
+das classes, os métodos declarados em uma interface são, por padrão, públicos e abstratos. Isso significa que as interfaces especificam apenas o cabeçalho dos métodos (tipo de
+retorno, nome e parâmetros), sem incluir sua implementação.
+Além disso, os campos definidos em interfaces são implicitamente public, static e final. Isso as diferencia das classes, onde os elementos têm privacidade padrão default (pacote).
+Desde a versão Java 8, interfaces podem conter métodos com implementações padrão (default methods) e métodos estáticos, o que as torna mais flexíveis ao permitir algum comportamento
+comum entre implementações." por exemplo:
+
+**Jeito Errado** [
+void falar(){
+    System.out.println("Olá, muito prazer!");
+}
+]
+
+**Jeito Certo** [
+void falar();
+]
