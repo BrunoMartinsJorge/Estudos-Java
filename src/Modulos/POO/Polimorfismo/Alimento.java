@@ -1,6 +1,6 @@
 package Modulos.POO.Polimorfismo;
 
-public class Alimento {
+public abstract class Alimento {
 
     private double peso;
 
